@@ -32,8 +32,8 @@ app.use((err, req, res, next) => {
 
 const start = async () => {
     await connectDB();
-    app.listen(3001, () => {
-        console.log('product service listening on port 3001');
+    app.listen(3000, () => {
+        console.log('product service listening on port 3000');
     });
 }
 
