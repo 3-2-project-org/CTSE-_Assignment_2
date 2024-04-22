@@ -23,7 +23,7 @@ jobs:
 
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@v1
+        uses: sonarsource/sonarcloud-github-action@main
         with:
           organization: 3-2-project-org
           token: ${{ secrets.SONAR_TOKEN }}
