@@ -29,6 +29,14 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
 
+      - name: Build docker image
+        run: docker build -t rexhonz77/products-microservice .
+        
+      - name: Publish image to docker hub
+        run: docker push rexhonz77/products-microservice:latest
+
+
+
   deploy:
     needs: build
     runs-on: self-hosted
