@@ -23,11 +23,8 @@ jobs:
 
 
       - name: SonarCloud Scan
-        uses: sonarsource/sonarcloud-github-action@main
-        with:
-          organization: 3-2-project-org
-          token: ${{ secrets.SONAR_TOKEN }}
-          projectKey: 3-2-project-org_CTSE-_Assignment_2
+        run: docker run --rm -e SONAR_TOKEN=${{ secrets.SONAR_TOKEN }} -v "${PWD}:/usr/src" sonarsource/sonar-scanner-cli
+
 
 
       - name: Login to Docker Hub
